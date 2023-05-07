@@ -1,6 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
 import styles from './NavMenu.module.css';
+import SignOutButton, { SignInButton } from "@/components/buttons";
+import AuthCheck from "@/components/AuthCheck";
 
 const NavMenu = () => {
   return (
@@ -22,6 +24,14 @@ const NavMenu = () => {
         </li>
         <li>
             <Link href={'/users'}>Users</Link>
+        </li>
+        <li>
+            <SignInButton />
+        </li>
+        <li>
+            <AuthCheck>
+                <SignOutButton />
+            </AuthCheck>
         </li>
     </ul>
     </nav>
